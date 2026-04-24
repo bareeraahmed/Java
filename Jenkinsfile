@@ -18,4 +18,13 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            echo 'Post build condition running'
+        }
+        failure {
+            echo 'Post Action if Build Failed'
+        }
+    }
 }
